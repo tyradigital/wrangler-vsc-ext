@@ -1,6 +1,7 @@
 {
   "name": "wrangler",
   "displayName": "Wrangler",
+  "publisher": "codiium",
   "description": "Making the cloudflare wrangler CLI tool easier to work with! (Requires @cloudflare/wrangler or wrangler@beta installed)",
   "version": "0.0.1",
   "engines": {
