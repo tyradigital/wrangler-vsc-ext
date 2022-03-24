@@ -15,7 +15,8 @@
     "onCommand:wrangler.disable",
     "onCommand:wrangler.setcompver",
     "onCommand:wrangler.tail",
-    "onCommand:wrangler.generate"
+    "onCommand:wrangler.generate",
+    "onCommand:wrangler.init"
   ],
   "main": "./out/extension.js",
   "repository": {
@@ -47,6 +48,11 @@
       {
         "command": "wrangler.generate",
         "title": "Generate a new Wrangler Project",
+        "category": "Wrangler"
+      },
+      {
+        "command": "wrangler.init",
+        "title": "Initalize a new wrangler.toml file",
         "category": "Wrangler"
       }
     ],

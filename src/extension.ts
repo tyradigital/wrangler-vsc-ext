@@ -14,7 +14,7 @@ import { execute as initExec } from "./commands/init";
 import Logger, { LogLevel } from "./utils/logger";
 import { getConfig } from "./utils/config";
 import { WranglerVersion } from "./utils/enums";
-import { getTerminal } from "./utils/terminal";
+import { disposeTerminal, getTerminal } from "./utils/terminal";
 
 export const outChannel = vscode.window.createOutputChannel("Wrangler Ext");
 
@@ -92,4 +92,6 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() {
+  disposeTerminal();
+}
