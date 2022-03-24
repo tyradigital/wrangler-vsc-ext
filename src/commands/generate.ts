@@ -1,8 +1,9 @@
 import { Terminal, window } from "vscode";
 import { exec } from "child_process";
 import Logger, { LogLevel } from "../utils/logger";
+import { WranglerVersion } from "../utils/enums";
 
-export async function execute(...args: []) {
+export async function execute(compver: WranglerVersion, ...args: []) {
   const ex = exec("wrangler", async (error, stdout, stderr) => {
     // Logger.log(LogLevel.debug, error!.message.toString());
     // Logger.log(LogLevel.debug, stderr);

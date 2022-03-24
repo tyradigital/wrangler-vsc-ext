@@ -1,8 +1,9 @@
 import { QuickPickItem, window } from "vscode";
 import { getConfig } from "../utils/config";
+import { WranglerVersion } from "../utils/enums";
 import Logger, { LogLevel } from "../utils/logger";
 
-export async function execute(...args: any[]) {
+export async function execute(compver: WranglerVersion, ...args: any[]) {
   const config = getConfig();
   try {
     const choiceBox = await window.showQuickPick<QuickPickItem>(

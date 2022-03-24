@@ -1,8 +1,9 @@
 import { window } from "vscode";
 import { getConfig } from "../utils/config";
+import { WranglerVersion } from "../utils/enums";
 import Logger, { LogLevel } from "../utils/logger";
 
-export async function execute(update = true) {
+export async function execute(compver: WranglerVersion, update = true) {
   const config = getConfig();
   try {
     if (update) {
