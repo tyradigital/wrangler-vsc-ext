@@ -3,7 +3,7 @@
   "displayName": "Wrangler",
   "publisher": "codiium",
   "description": "Making the cloudflare wrangler CLI tool easier to work with! (Requires @cloudflare/wrangler or wrangler@beta installed)",
-  "version": "0.0.1",
+  "version": "0.1.0-alpha",
   "engines": {
     "vscode": "^1.65.0"
   },
