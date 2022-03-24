@@ -22,10 +22,22 @@ export async function execute(compver: WranglerVersion, ...args: []) {
         prompt: "What do you want to name this wrangler project?",
       });
 
+      if (typeof name === "undefined") {
+        return window.showInformationMessage(
+          "Cancelled Wrangler Project Generator"
+        );
+      }
+
       const template = await window.showInputBox({
         title: "Wrangler Generate",
         prompt: "Do you want to use a template? If so, supply the url",
       });
+
+      if (typeof template === "undefined") {
+        return window.showInformationMessage(
+          "Cancelled Wrangler Project Generator"
+        );
+      }
 
       const options = await window.showInputBox({
         title: "Wrangler Generate",
@@ -33,11 +45,7 @@ export async function execute(compver: WranglerVersion, ...args: []) {
           "Finally, do you want to supply any options? (Commandline '--' format)",
       });
 
-      if (
-        typeof name === "undefined" ||
-        typeof template === "undefined" ||
-        typeof options === "undefined"
-      ) {
+      if (typeof options === "undefined") {
         return window.showInformationMessage(
           "Cancelled Wrangler Project Generator"
         );
